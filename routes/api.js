@@ -7,6 +7,7 @@ router.all('/ping', async (req, res, next)=>{
   res.json(req.clients.length)
 });
 router.post('/login', async (req, res, next)=> {
+  return res.status(404).send("not found")
   delete req.session.user;
   var q=await req.knex
       .select("*")
