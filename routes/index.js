@@ -4,7 +4,7 @@ const lang=require('../lang')
 
 /* GET home page. */
 router.get('/', login, function(req, res, next) {
-
+  return res.redirect("/login")
   res.render('index', { title: '', lang:lang.en,  user:JSON.stringify(req.session.user) });
 });
 function login(req, res, next){
