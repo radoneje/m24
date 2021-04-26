@@ -91,7 +91,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
-  var clients=new clientsClass();
+ /* var clients=new clientsClass();
   app.clients=clients;
   const io = require('socket.io')(server);
   io.on('connection', (socket) => {
@@ -104,6 +104,6 @@ function onListening() {
       app.clients.remove(clinentId);
       console.log("client dissconected")
     })
-  });
+  });*/
 
 }
