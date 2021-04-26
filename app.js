@@ -29,21 +29,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 const pgSession = require('connect-pg-simple')(session);
 const pgStoreConfig = {conObject: config.pgConnection}
 
-app.use(session({
+/*app.use(session({
   secret: (config.sha256Secret),
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 1 * 24 * 60 * 60 * 1000 }, // 1 days
   store:new pgSession(pgStoreConfig),
-}));
+}));*/
 
-var knex = require('knex')({
+/*var knex = require('knex')({
   client: 'pg',
   version: '7.2',
   connection:config.pgConnection
-});
-app.use("/", (req,res, next)=>{req.knex=knex;next();});
-app.use("/", (req,res, next)=>{req.clients=app.clients;next();});
+});*/
+//app.use("/", (req,res, next)=>{req.knex=knex;next();});
+//app.use("/", (req,res, next)=>{req.clients=app.clients;next();});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
