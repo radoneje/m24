@@ -23,8 +23,8 @@ block content
                 div.login-input-bottom
                 div.login-input-complite
               div(style="height: 20px;" class="message") {{message}}
-              div.login-send-btn()
-                div(v-if="!isLoading" v-on:click.stop.prevent="tryLogin()") #{lang.login}
+              div.login-send-btn(v-on:click.stop.prevent="tryLogin()")
+                div(v-if="!isLoading" ) #{lang.login}
                 div(v-else style="display: flex; align-items: center;")
                     img(src="/images/icons/spinner.svg" style="width:40px")
                     span loging in ...
