@@ -1,0 +1,14 @@
+extends layout
+block head
+
+block content
+  div(class="main-page" id="main-page")
+    include elements/head
+    include elements/right
+    include elements/left
+    div(class="main-page-container")
+      div(class="main-page-r")
+  script.
+    var user=!{user};
+  script(src='/lib/socket.io.js')
+  script(src="/javascripts/indexscript.js")

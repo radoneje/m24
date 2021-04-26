@@ -1,0 +1,36 @@
+div(class="main-right")
+    div(class="ico-right" v-on:click="exitClick")
+        <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="400px" viewBox="0 0 210 490" style="width:15px;" xml:space="preserve">
+        <defs>
+        </defs>
+        <path class="st0" d="M34.3,162.2"/>
+        <path class="st0" d="M0,196.5"/>
+        <path class="st0" d="M60.4,155.4l215.7,215.7c2,2-3,10.8-13.2,22.9c-9.9,11.8-21,23.2-34.5,34l33.2-33.2 c-10.8,13.6-22.3,24.6-34,34.5c-12,10.1-20.8,15.2-22.9,13.2L0,237.9l0.2-26.2l6.4-6.5L211.3,0.4c2-2,10.8,3,22.9,13.2 c11.8,9.9,23.2,21,34,34.5L235,14.9c13.6,10.8,24.6,22.3,34.5,34c10.1,12,15.2,20.8,13.2,22.9l-218.9,219"/>
+        </svg>
+
+    div(class="ico-right " v-bind:class="{active:panels.rundown}" v-on:click="changePanels('rundown')")
+        span N
+    div(class="ico-right" v-bind:class="{active:panels.dashboard}" v-on:click="changePanels('dashboard')")
+        span D
+    div(class="separator-right")
+    div(class="ico-right" v-bind:class="{active:tabs.archive}" v-on:click="changeTabs('archive')")
+        span A
+    div(class="ico-right" v-bind:class="{active:tabs.video}" v-on:click="changeTabs('video')")
+        span V
+    div(class="ico-right" v-bind:class="{active:tabs.rss}" v-on:click="changeTabs('rss')")
+        span R
+    div(class="ico-right" v-bind:class="{active:tabs.messager}" v-on:click="changeTabs('messager')")
+        span M
+transition(name="fade" )
+    div(class="box-right" v-if="tabIsOpen")
+        div(class="wrRight" v-if="tabs.archive")
+            include archive
+        div(class="wrRight" v-if="tabs.video")
+            include video
+        div(class="wrRight" v-if="tabs.rss")
+            include rss
+        div(class="wrRight" v-if="tabs.messager")
+            include messager
+
+

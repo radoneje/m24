@@ -1,0 +1,10 @@
+{
+  "serverPort": 2023,
+  "pgConnection":  {
+    "host" : "127.0.0.1",
+    "user" : "postgres",
+    "password" : "gbplf13",
+    "database" : "nf"
+  },
+  "sha256Secret": "dfczgegrby"
+}

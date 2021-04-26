@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF0068;}
+	.st1{fill:#3A465E;}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M-568.3-106.87l-75.16,66.02V-76.8c0-16.6-13.46-30.06-30.06-30.06H-829l300.62,300.62h5.17V43.45v-150.31
+		H-568.3z"/>
+	<g>
+		<path class="st0" d="M-1004.2-154.54l47.68,47.68h-17.61c-16.6,0-30.06,13.46-30.06,30.06v240.5c0,16.6,13.46,30.06,30.06,30.06
+			h300.62c5.08,0,9.64-1.59,13.77-3.84l94.03,94.03l42.51-42.51l-438.48-438.49L-1004.2-154.54L-1004.2-154.54z"/>
+	</g>
+</g>
+<path class="st1" d="M-382.93,574.52l-75,65.88v-35.88c0-16.57-13.43-30-30-30h-300c-16.57,0-30,13.43-30,30v240
+	c0,16.57,13.43,30,30,30h300c16.57,0,30-13.43,30-30v-35.89l75,65.89h45v-150v-150H-382.93z"/>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="-1558.15,801.94 -278.15,801.94 -289.6,-1015.67 -1569.6,-1015.67 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+</g>
+<line class="st2" x1="44.7" y1="467.3" x2="467.3" y2="44.7"/>
+<line class="st2" x1="44.7" y1="44.7" x2="467.3" y2="467.3"/>
+</svg>

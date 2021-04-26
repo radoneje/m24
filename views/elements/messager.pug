@@ -1,0 +1,7 @@
+div Messager
+    div(v-for="user in users")
+
+        div
+         div.user-status(v-bind:class="{online:user.isActive}")
+         span {{user.name}} {{user.suName}}
+

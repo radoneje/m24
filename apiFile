@@ -1,0 +1,2 @@
+/rest/api/v1/
+user = return current user info

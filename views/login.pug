@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  div(class="login-page" id="app")
+    div.login-wr-shadow(v-bind:class="{'ready':ready}")
+    div(class="login-wr" v-bind:class="{'ready':ready}")
+      div.login-box
+        div(style="text-align: center;")
+          img.logo-login(src="/images/icons/logo-group.svg" )
+          img.logo-dots(src="/images/icons/dots.svg" )
+          div.login-form
+            form(method="POST"     v-on:submit.stop.prevent="tryLogin()" )
+              div.login-form-row(v-bind:class="{complited:validateEmail(login)}")
+                div.login-input
+                  div.login-input-placeholder(v-on:click="document.getElementById('login').focus()" v-bind:class="{isEpty:login.length==0}") #{lang.email}
+                  input(name="email" id="login" ref="login"  v-model="login" v-on:keyDown="loginClick" v-bind:class="{'error':!validateEmail(login)}")
+                div.login-input-bottom
+                div.login-input-complite
+              div.login-form-row(v-bind:class="{complited:validatePass(pass)}")
+                div.login-input
+                  div.login-input-placeholder(v-on:click="document.getElementById('password').focus()" v-bind:class="{isEpty:pass.length==0}") #{lang.password}
+                  input(name="password" id="password" ref="pass" type="password"  v-model="pass" v-on:keyDown="passClick" v-bind:class="{'error':!validatePass(password)}")
+                div.login-input-bottom
+                div.login-input-complite
+              div(style="height: 20px;" class="message") {{message}}
+              div.login-send-btn
+                div(v-if="!isLoading" v-on:click.stop.prevent="tryLogin()") #{lang.login}
+                div(v-else style="display: flex; align-items: center;")
+                    img(src="/images/icons/spinner.svg" style="width:40px")
+                    span loging in ...
+  script(src="/javascripts/loginscript.js")

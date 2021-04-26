@@ -1,0 +1,42 @@
+div(class="main-head" id="main-head")
+    div(style="")
+        img(src="/favicon-16x16.png")
+    div(style="")
+        div(class="head-menu-item" v-on:click="userClick" style="display:none" v-show="user.name && user.name.length>0") {{user.name}} {{user.suName}}
+
+    transition(name="fade")
+        div(class="user-menu full-screen-wr" v-on:click.stop.prevent="closeSettings" v-show="userMenu" style="display:none")
+            div(class="full-screen-box" v-on:click.stop.prevent="void")
+                img(src="/images/icons/icon-close.svg" class="close-icon" v-on:click="closeSettings")
+                div(class="full-screen-content" v-on:click.stop.prevent="void")
+                    div(class="row")
+                        div(class="column column-title") E-mail:
+                        div(class="column req")
+                            input(v-model="user.email" v-on:change="userChange" )
+                    div(class="row")
+                        div(class="column column-title ") First name:
+                        div(class="column req")
+                            input(v-model="user.name" v-on:change="userChange")
+                    div(class="row")
+                        div(class="column column-title") Famely name:
+                        div(class="column req")
+                            input(v-model="user.suName"  cv-on:change="userChange")
+                    div(class="row")
+                        div(class="column column-title") Read rate:
+                        div(class="column req")
+                            input(v-model="user.readRate" type="number"  v-on:change="userChange" )
+
+                    div(class="row")
+                        div(class="column column-title") Phone:
+                        div(class="column")
+                            input(v-model="user.phone" v-on:change="userChange")
+
+                    div(class="row")
+                        div(class="column column-title") Facebook:
+                        div(class="column")
+                            input(v-model="user.fb" v-on:change="userChange")
+                    div(class="row")
+                        div(class="column column-title") Password:
+                        div(class="column")
+                            input(v-model="user.password" type="password" v-on:change="userChange" )
+
