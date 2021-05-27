@@ -12,16 +12,16 @@ router.post('/login', async (req, res, next)=> {
   var q=await req.knex
       .select("*")
       .from("t_users")
-      //.where({email:req.body.login, password:req.body.pass, isDeleted:false});
-  console.log(q)
+      .where({email:req.body.login, password:req.body.pass, isDeleted:false});
+  //console.log(q)
   if(q.length==0)
     {return res.status(404).send("not found")};
-  var utp=await req.knex
+  /*var utp=await req.knex
       .select("*")
       .from("t_userToProg")
       .where({userId:q[0].id});
   if(utp.length==0)
-  {return res.status(404).send("not found")};
+  {return res.status(404).send("not found")};*/
   req.session.user=q[0];
   res.json({id:q[0].id, name:q[0].name, suName:q[0].suName});
 });
