@@ -8,7 +8,7 @@ var mainHeadApp = new Vue({
         panels:{rundown:true, dashboard:false},
         tabs:{archive:false,video:false,messager:false,rss:false},
         tabIsOpen:false,
-        programs:[{id:1,title:'Новости 24', isSelected:true}],
+        programs:[{id:1,title:'News 24', isSelected:true}],
         news:[],
         selNews:{},
         settings:{},
