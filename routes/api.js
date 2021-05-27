@@ -12,7 +12,7 @@ router.post('/login', async (req, res, next)=> {
   var q=await req.knex
       .select("*")
       .from("t_users")
-      .where({email:req.body.login, password:req.body.pass, isDeleted:false});
+      //.where({email:req.body.login, password:req.body.pass, isDeleted:false});
   if(q.length==0)
     {return res.status(404).send("not found")};
   var utp=await req.knex
