@@ -13,6 +13,7 @@ router.post('/login', async (req, res, next)=> {
       .select("*")
       .from("t_users")
       //.where({email:req.body.login, password:req.body.pass, isDeleted:false});
+  console.log(q)
   if(q.length==0)
     {return res.status(404).send("not found")};
   var utp=await req.knex
