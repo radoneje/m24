@@ -34,7 +34,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 1 * 24 * 60 * 60 * 1000 }, // 1 days
-  store:new pgSession(pgStoreConfig),
+//  store:new pgSession(pgStoreConfig),
 }));
 /*
 var knex = require('knex')({
