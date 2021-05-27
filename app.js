@@ -31,7 +31,7 @@ const pgStoreConfig = {conObject: config.pgConnection}
 
 var knex = require('knex')({
   client: 'pg',
-  version: '7.2',
+  version: '8.0',
   connection:config.pgConnection
 });
 
