@@ -29,14 +29,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 const pgSession = require('connect-pg-simple')(session);
 const pgStoreConfig = {conObject: config.pgConnection}
 
-/*app.use(session({
+app.use(session({
   secret: (config.sha256Secret),
   resave: false,
   saveUninitialized: true,
   cookie: { maxAge: 1 * 24 * 60 * 60 * 1000 }, // 1 days
   store:new pgSession(pgStoreConfig),
 }));
-
+/*
 var knex = require('knex')({
   client: 'pg',
   version: '7.2',
