@@ -2,9 +2,6 @@ var express = require('express');
 var router = express.Router();
 const lang=require('../lang')
 
-router.get('/ping', function(req, res, next) {
-    res.json("pong")
-})
 /* GET home page. */
 router.get('/', login, function(req, res, next) {
  // return res.redirect("/login")
