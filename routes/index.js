@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 const lang=require('../lang')
 
+router.get('/ping', function(req, res, next) {
+    res.json("pong")
+})
 /* GET home page. */
 router.get('/', login, function(req, res, next) {
  // return res.redirect("/login")
@@ -9,10 +12,10 @@ router.get('/', login, function(req, res, next) {
 });
 function login(req, res, next){
 
- // if (!req.session|| !req.session.user)
+  if (!req.session|| !req.session.user)
     return res.redirect("/login")
 
- // next();
+  next();
 }
 router.all('/login', async (req, res, next)=>{
   //req.session.user=null;
