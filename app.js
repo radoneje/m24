@@ -42,10 +42,10 @@ app.use(session({
   cookie: { maxAge: 1 * 24 * 60 * 60 * 1000 }, // 1 days
 //  store:new pgSession(pgStoreConfig),
 }));
-/*
+
 
 app.use("/", (req,res, next)=>{req.knex=knex;next();});
-app.use("/", (req,res, next)=>{req.clients=app.clients;next();});*/
+app.use("/", (req,res, next)=>{req.clients=app.clients;next();});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
