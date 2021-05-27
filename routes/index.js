@@ -9,10 +9,10 @@ router.get('/', login, function(req, res, next) {
 });
 function login(req, res, next){
 
-  if (!req.session|| !req.session.user)
+ // if (!req.session|| !req.session.user)
     return res.redirect("/login")
 
-  next();
+ // next();
 }
 router.all('/login', async (req, res, next)=>{
   //req.session.user=null;
